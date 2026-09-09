@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Tradecraft</title>
+<meta name="description" content="A 10-week, four-tier personal curriculum for turning AI fluency into a lasting edge at work and at home.">
+<meta name="theme-color" content="#14171B">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Tradecraft">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A7%AD%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --ink: #1B2027;
+    --ink-soft: #4B5560;
+    --ink-faint: #7A8189;
+    --paper: #E8E6DC;
+    --surface: #F5F3EC;
+    --surface-raised: #FDFCF8;
+    --border: #D6D2C4;
+    --border-strong: #C2BDAC;
+    --accent-blue: #2C5A82;
+    --accent-blue-soft: rgba(44, 90, 130, 0.10);
+    --accent-blue-border: rgba(44, 90, 130, 0.35);
+    --accent-brass: #A97327;
+    --accent-brass-soft: rgba(169, 115, 39, 0.12);
+    --accent-brass-border: rgba(169, 115, 39, 0.4);
+    --success: #3F7D53;
+    --success-soft: rgba(63, 125, 83, 0.10);
+    --success-border: rgba(63, 125, 83, 0.4);
+    --shadow: 0 1px 2px rgba(27, 32, 39, 0.06), 0 8px 24px -12px rgba(27, 32, 39, 0.18);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #E7E4D8;
+      --ink-soft: #A7AFB7;
+      --ink-faint: #737B84;
+      --paper: #14171B;
+      --surface: #1B1F25;
+      --surface-raised: #21262D;
+      --border: #2B313A;
+      --border-strong: #394048;
+      --accent-blue: #74ACD9;
+      --accent-blue-soft: rgba(116, 172, 217, 0.12);
+      --accent-blue-border: rgba(116, 172, 217, 0.4);
+      --accent-brass: #DCA455;
+      --accent-brass-soft: rgba(220, 164, 85, 0.14);
+      --accent-brass-border: rgba(220, 164, 85, 0.45);
+      --success: #74C48A;
+      --success-soft: rgba(116, 196, 138, 0.12);
+      --success-border: rgba(116, 196, 138, 0.4);
+      --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px -12px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ink: #E7E4D8;
+    --ink-soft: #A7AFB7;
+    --ink-faint: #737B84;
+    --paper: #14171B;
+    --surface: #1B1F25;
+    --surface-raised: #21262D;
+    --border: #2B313A;
+    --border-strong: #394048;
+    --accent-blue: #74ACD9;
+    --accent-blue-soft: rgba(116, 172, 217, 0.12);
+    --accent-blue-border: rgba(116, 172, 217, 0.4);
+    --accent-brass: #DCA455;
+    --accent-brass-soft: rgba(220, 164, 85, 0.14);
+    --accent-brass-border: rgba(220, 164, 85, 0.45);
+    --success: #74C48A;
+    --success-soft: rgba(116, 196, 138, 0.12);
+    --success-border: rgba(116, 196, 138, 0.4);
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px -12px rgba(0, 0, 0, 0.5);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection { background: var(--accent-blue-soft); }
+
+  a { color: var(--accent-blue); }
+
+  :focus-visible {
+    outline: 2px solid var(--accent-blue);
+    outline-offset: 2px;
+  }
+
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+
+  h1, h2, h3 {
+    font-family: "Barlow Condensed", "Public Sans", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    text-wrap: balance;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  .eyebrow {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+
+  .mono { font-family: "IBM Plex Mono", monospace; font-variant-numeric: tabular-nums; }
+
+  header.top {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 32px;
+    margin-bottom: 40px;
+  }
+
+  header.top .eyebrow { margin-bottom: 10px; }
+
+  header.top h1 {
+    font-size: clamp(40px, 8vw, 64px);
+    font-weight: 700;
+    line-height: 0.95;
+  }
+
+  header.top .subtitle {
+    margin-top: 14px;
+    max-width: 60ch;
+    color: var(--ink-soft);
+    font-size: 17px;
+  }
+
+  header.top .subtitle strong { color: var(--ink); font-weight: 600; }
+
+  .panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    box-shadow: var(--shadow);
+  }
+
+  .overview {
+    padding: 24px 28px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .overview .stat-label {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 6px;
+  }
+
+  .overview .stat-value {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 700;
+    font-size: 34px;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+  }
+
+  .bar-track {
+    width: 100%;
+    height: 8px;
+    background: var(--border);
+    border-radius: 999px;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+
+  .bar-fill {
+    height: 100%;
+    background: var(--accent-blue);
+    border-radius: 999px;
+    transition: width 0.4s ease;
+  }
+  @media (prefers-reduced-motion: reduce) { .bar-fill { transition: none; } }
+
+  .tier-dots {
+    display: flex;
+    gap: 10px;
+  }
+
+  .tier-dot {
+    text-align: center;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    color: var(--ink-faint);
+  }
+
+  .tier-dot .ring {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 2px solid var(--border-strong);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 4px;
+    font-weight: 500;
+    color: var(--ink-soft);
+  }
+
+  .tier-dot.done .ring {
+    border-color: var(--success);
+    background: var(--success-soft);
+    color: var(--success);
+  }
+
+  .next-up {
+    padding: 18px 28px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    border-color: var(--accent-brass-border);
+    background: var(--accent-brass-soft);
+  }
+
+  .next-up .label {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent-brass);
+    margin-bottom: 4px;
+  }
+
+  .next-up .title {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+  }
+
+  .next-up a {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    text-decoration: none;
+    white-space: nowrap;
+    color: var(--accent-brass);
+    border-bottom: 1px solid var(--accent-brass-border);
+    padding-bottom: 2px;
+  }
+
+  .next-up.all-done { border-color: var(--success-border); background: var(--success-soft); }
+  .next-up.all-done .label, .next-up.all-done a { color: var(--success); border-color: var(--success-border); }
+
+  .intro {
+    padding: 24px 28px;
+    margin-bottom: 56px;
+  }
+
+  .intro p { margin: 0 0 12px; color: var(--ink-soft); max-width: 68ch; }
+  .intro p:last-child { margin-bottom: 0; }
+  .intro strong { color: var(--ink); font-weight: 600; }
+
+  .tier {
+    margin-bottom: 52px;
+  }
+
+  .tier-head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--ink);
+    margin-bottom: 8px;
+  }
+
+  .tier-head .roman {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--ink-faint);
+  }
+
+  .tier-head h2 {
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  .tier-head .tier-sub {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    color: var(--ink-faint);
+    margin-left: auto;
+    white-space: nowrap;
+  }
+
+  .tier-desc {
+    color: var(--ink-soft);
+    max-width: 68ch;
+    margin: 12px 0 24px;
+  }
+
+  .week {
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--border-strong);
+    border-radius: 4px;
+    background: var(--surface);
+    padding: 22px 24px;
+    margin-bottom: 16px;
+    position: relative;
+  }
+
+  .week.is-next { border-left-color: var(--accent-brass); }
+  .week.is-done { border-left-color: var(--success); }
+
+  .week-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+
+  .week-num {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    color: var(--ink-faint);
+    letter-spacing: 0.06em;
+  }
+
+  .week h3 {
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  .chip {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 999px;
+    border: 1px solid var(--accent-brass-border);
+    color: var(--accent-brass);
+    background: var(--accent-brass-soft);
+  }
+
+  .chip.done { border-color: var(--success-border); color: var(--success); background: var(--success-soft); }
+
+  .week p.body-text {
+    color: var(--ink-soft);
+    margin: 0 0 16px;
+    max-width: 66ch;
+  }
+
+  .apps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: 560px) { .apps { grid-template-columns: 1fr; } }
+
+  .app-block {
+    background: var(--surface-raised);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 12px 14px;
+  }
+
+  .app-block .app-label {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent-blue);
+    margin-bottom: 6px;
+  }
+
+  .app-block p { margin: 0; font-size: 14.5px; color: var(--ink-soft); }
+
+  .app-block.na .app-label { color: var(--ink-faint); }
+  .app-block.na p { font-style: italic; color: var(--ink-faint); }
+
+  .exercise {
+    border-top: 1px dashed var(--border-strong);
+    padding-top: 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .exercise label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 14.5px;
+  }
+
+  .exercise input[type="checkbox"] {
+    margin-top: 3px;
+    width: 16px;
+    height: 16px;
+    accent-color: var(--success);
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+
+  .exercise .ex-label {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  .exercise span.ex-text { color: var(--ink); }
+
+  .longgame {
+    margin-top: 64px;
+  }
+
+  .longgame-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 24px;
+  }
+
+  @media (max-width: 640px) { .longgame-grid { grid-template-columns: 1fr; } }
+
+  .habit {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 18px 20px;
+  }
+
+  .habit .habit-label {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-blue);
+    margin-bottom: 8px;
+  }
+
+  .habit p { margin: 0; color: var(--ink-soft); font-size: 14.5px; }
+
+  footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--ink-faint);
+    font-size: 13.5px;
+  }
+
+  footer p { max-width: 66ch; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="top">
+    <div class="eyebrow">Personal Operations File — CJ Flowers</div>
+    <h1>Tradecraft</h1>
+    <p class="subtitle">
+      Ten weeks of method, built from what's already on your bench — Azimuth,
+      DFS-550, Operation: Laughing GAs, Ethan Mode, Hero Mode, the backyard —
+      <strong>plus the habits that keep compounding after week ten.</strong>
+      Every waypoint below pairs a work application with a home one, because
+      the underlying skill is the same either way.
+    </p>
+  </header>
+
+  <div class="panel overview">
+    <div>
+      <div class="stat-label">Overall Progress</div>
+      <div class="stat-value"><span id="overall-pct">0</span>%<span class="mono" style="font-size:14px;color:var(--ink-faint);font-weight:400;"> — <span id="overall-count">0</span>/10 waypoints</span></div>
+      <div class="bar-track"><div class="bar-fill" id="overall-bar" style="width:0%"></div></div>
+    </div>
+    <div class="tier-dots">
+      <div class="tier-dot" data-tier-dot="1"><div class="ring">I</div>RECON</div>
+      <div class="tier-dot" data-tier-dot="2"><div class="ring">II</div>FIELD</div>
+      <div class="tier-dot" data-tier-dot="3"><div class="ring">III</div>ORDERS</div>
+      <div class="tier-dot" data-tier-dot="4"><div class="ring">IV</div>COMMAND</div>
+    </div>
+  </div>
+
+  <div class="panel next-up" id="next-up-panel">
+    <div>
+      <div class="label" id="next-up-label">Next Waypoint</div>
+      <div class="title" id="next-up-title">Week 1 — Build Your Case File</div>
+    </div>
+    <a href="#week-1" id="next-up-link">Jump to it →</a>
+  </div>
+
+  <div class="panel intro">
+    <p><strong>How this works.</strong> Four tiers, ten weekly waypoints, roughly
+    one per week — but there's no lock and no clock. Each waypoint has a short
+    idea, a work application, a home application, and one real exercise to run
+    with Claude that same week, using something already on your plate rather
+    than a hypothetical.</p>
+    <p><strong>Why this split.</strong> The work/home blend was built from what's
+    already tracked about your projects rather than planned in advance —
+    tiers I–III alternate between the two deliberately, since the same
+    capability (context, building, automation) applies to both. Tier IV leans
+    work, because teaching is where a forensics trainer's advantage compounds
+    fastest.</p>
+    <p><strong>Progress is saved in this browser</strong> — check off an
+    exercise once you've actually run it, not once you've read about it.</p>
+  </div>
+
+  <section class="tier" data-tier="1">
+    <div class="tier-head">
+      <span class="roman">I.</span>
+      <h2>Recon</h2>
+      <span class="tier-sub">Foundations — Weeks 1–2</span>
+    </div>
+    <p class="tier-desc">Scout the terrain before you build on it: what Claude
+    remembers, and how precisely you ask.</p>
+
+    <article class="week" data-week="1" id="week-1">
+      <div class="week-head">
+        <span class="week-num">WEEK 01</span>
+        <h3>Build Your Case File</h3>
+        <span class="chip" data-chip="1">Not started</span>
+      </div>
+      <p class="body-text">Persistent memory is the difference between an
+      assistant that starts cold every session and one that already knows the
+      terrain. This week is about deliberately shaping what Claude remembers,
+      so every future session picks up mid-stride instead of at zero.</p>
+      <div class="apps">
+        <div class="app-block">
+          <div class="app-label">At Work</div>
+          <p>Keep casework and training-content context — device legends,
+          Azimuth's curriculum decisions, DFS-550 deadlines — persistent, so
+          you're never re-briefing from scratch.</p>
+        </div>
+        <div class="app-block">
+          <div class="app-label">At Home</div>
+          <p>Same principle for Ethan's application timeline, the backyard
+          build, and the Hero Mode / Ethan Mode roadmaps — one running file
+          instead of five scattered threads.</p>
+        </div>
+      </div>
+      <div class="exercise">
+        <label>
+          <input type="checkbox" data-week-check="1">
+          <span><span class="ex-label">Exercise</span><span class="ex-text">Pick one active project and ask Claude to summarize everything it currently knows about it. Correct anything wrong or missing — that correction is what makes the file trustworthy going forward.</span></span>
+        </label>
+      </div>
+    </article>
+
+    <article class="week" data-week="2" id="week-2">
+      <div class="week-head">
+        <span class="week-num">WEEK 02</span>
+        <h3>Ask Like an Analyst</h3>
+        <span class="chip" data-chip="2">Not started</span>
+      </div>
+      <p class="body-text">The gap between a mediocre answer and a rigorous
+      one is almost always in how the question was built — what sources you
+      demanded, what you asked it to verify, what you told it not to guess
+      at.</p>
+      <div class="apps">
+        <div class="app-block">
+          <div class="app-label">At Work</div>
+          <p>For anything evidentiary — CFTT test reports, case law, tool
+          comparisons — ask Claude to cite and separate what it found from
+          what it's inferring, then check the primary source yourself before
+          it goes in an assignment or a report.</p>
+        </div>
+        <div class="app-block">
+          <div class="app-label">At Home</div>
+          <p>Same discipline pays off on real decisions — septic setback
+          requirements for the backyard, real specs before a gym-equipment
+          purchase, actual admissions requirements for Ethan's schools.</p>
+        </div>
+      </div>
+      <div class="exercise">
+        <label>
+          <input type="checkbox" data-week-check="2">
+          <span><span class="ex-label">Exercise</span><span class="ex-text">Take your current DFS-550 assignment and run it through a source-first prompt: ask for the claim, the source, and a confidence flag before you accept anything.</span></span>
+        </label>
+      </div>
+    </article>
+  </section>
+
+  <section class="tier" data-tier="2">
+    <div class="tier-head">
+      <span class="roman">II.</span>
+      <h2>Fieldcraft</h2>
+      <span class="tier-sub">Builder — Weeks 3–5</span>
+    </div>
+    <p class="tier-desc">The practical skills of actually producing something
+    — dashboards, documents, and code — done as a repeatable loop instead of
+    one-off effort.</p>
+
+    <article class="week" data-week="3" id="week-3">
+      <div class="week-head">
+        <span class="week-num">WEEK 03</span>
+        <h3>The Rapid Build Loop</h3>
+        <span class="chip" data-chip="3">Not started</span>
+      </div>
+      <p class="body-text">You already run this loop informally — it's how
+      Ethan's Flight Plan dashboard and Hero Mode got built. This week is
+      about naming and tightening it: research, structure the data, build a
+      working draft, iterate live, keep the good one.</p>
+      <div class="apps">
+        <div class="app-block">
+          <div class="app-label">At Work</div>
+          <p>Use it for anything with real structure worth visualizing — a
+          training-scenario timeline, a comparative tool matrix for
+          coursework.</p>
+        </div>
+        <div class="app-block">
+          <div class="app-label">At Home</div>
+          <p>Take the backyard landscaping concepts somewhere real — from
+          static SVG mockups to one interactive planner you can actually
+          adjust and keep.</p>
+        </div>
+      </div>
+      <div class="exercise">
+        <label>
+          <input type="checkbox" data-week-check="3">
+          <span><span class="ex-label">Exercise</span><span class="ex-text">Turn the backyard concepts into a single interactive layout, with the septic field and setback requirements built in as hard boundaries, not just notes.</span></span>
+        </label>
+      </div>
+    </article>
+
+    <article class="week" data-week="4" id="week-4">
+      <div class="week-head">
+        <span class="week-num">WEEK 04</span>
+        <h3>The Paper Trail</h3>
+        <span class="chip" data-chip="4">Not started</span>
+      </div>
+      <p class="body-text">Formal writing — APA citations, legal source
+      synthesis, structured reports — is exactly the kind of grinding work
+      worth handing off completely, as long as you keep verifying sources
+      yourself.</p>
+      <div class="apps">
+        <div class="app-block">
+          <div class="app-label">At Work</div>
+          <p>Run a DFS-550 assignment end-to-end: outline, sourced draft,
+          formatted document, citation check.</p>
+        </div>
+        <div class="app-block">
+          <div class="app-label">At Home</div>
+          <p>The same pipeline produces the PDF guides you've already made
+          for Ethan's college search — formalize it so the next one takes an
+          hour, not an evening.</p>
+        </div>
+      </div>
+      <div class="exercise">
+        <label>
+          <input type="checkbox" data-week-check="4">
+          <span><span class="ex-label">Exercise</span><span class="ex-text">Take your next DFS-550 assignment from blank page to a formatted draft document in one sitting, citations included.</span></span>
+        </label>
+      </div>
+    </article>
+
+    <article class="week" data-week="5" id="week-5">
+      <div class="week-head">
+        <span class="week-num">WEEK 05</span>
+        <h3>Code in the Loop</h3>
+        <span class="chip" data-chip="5">Not started</span>
+      </div>
+      <p class="body-text">The KTX texture-format work and the Python
+      environment troubleshooting you've already done are the pattern:
+      describe the problem precisely, let Claude propose and test, iterate on
+      what actually breaks rather than what you assume will.</p>
+      <div class="apps">
+        <div class="app-block">
+          <div class="app-label">At Work</div>
+          <p>Use this loop for forensic scripting — parsing artifacts,
+          comparing format versions, environment setup that would otherwise
+          eat an afternoon.</p>
+        </div>
+        <div class="app-block">
+          <div class="app-label">At Home</div>
+          <p>Same loop for Hero Mode and Ethan Mode — feature by feature,
+          tested as you go rather than built blind.</p>
+        </div>
+      </div>
+      <div class="exercise">
+        <label>
+          <input type="checkbox" data-week-check="5">
+          <span><span class="ex-label">Exercise</span><span class="ex-text">Pick your next real scripting task and run the loop deliberately: state the failure, let Claude reproduce it, fix, verify, repeat.</span></span>
+        </label>
+      </div>
+    </article>
+  </section>
+
+  <section class="tier" data-tier="3">
+    <div class="tier-head">
+      <span class="roman">III.</span>
+      <h2>Standing Orders</h2>
+      <span class="tier-sub">Automator — Weeks 6–8</span>
+    </div>
+    <p class="tier-desc">A standing order stays in effect until you cancel
+    it. This tier is about instructions and checks that run without you
+    remembering to ask twice.</p>
+
+    <article class="week" data-week="6" id="week-6">
+      <div class="week-head">
+        <span class="week-num">WEEK 06</span>
+        <h3>Build a Standing Order</h3>
+        <span class="chip" data-chip="6">Not started</span>
+      </div>
+      <p class="body-text">A skill is something you teach Claude once and
+      never re-explain. Anything you've done the same way more than twice is
+      a candidate.</p>
+      <div class="apps">
+        <div class="app-block">
+          <div class="app-label">At Work</div>
+          <p>A device-legend builder for Operation: Laughing GAs, or a
+          consistent formatting pass for DFS-550 citations.</p>
+        </div>
+        <div class="app-block">
+          <div class="app-label">At Home</div>
+          <p>A repeatable pattern for Ethan's college checklists, or a
+          consistent format for backyard project notes.</p>
+        </div>
+      </div>
+      <div class="exercise">
+        <label>
+          <input type="checkbox" data-week-check="6">
+          <span><span class="ex-label">Exercise</span><span class="ex-text">Pick one task you've redone by hand at least twice, and turn it into a saved skill.</span></span>
+        </label>
+      </div>
+    </article>
+
+    <article class="week" data-week="7" id="week-7">
+      <div class="week-head">
+        <span class="week-num">WEEK 07</span>
+        <h3>Set It and Forget It</h3>
+        <span class="chip" data-chip="7">Not started</span>
+      </div>
+      <p class="body-text">Scheduled tasks mean Claude checks on something
+      without you remembering to — useful for anything with a real deadline
+      or a recurring cadence.</p>
+      <div class="apps">
+        <div class="app-block">
+          <div class="app-label">At Work</div>
+          <p>A weekly nudge ahead of DFS-550 due dates, or a periodic pass to
+          keep training content current.</p>
+        </div>
+        <div class="app-block">
+          <div class="app-label">At Home</div>
+          <p>A standing check on Ethan's application deadlines as senior
+          year runs its course.</p>
+        </div>
+      </div>
+      <div class="exercise">
+        <label>
+          <input type="checkbox" data-week-check="7">
+          <span><span class="ex-label">Exercise</span><span class="ex-text">Set up one scheduled task tied to a real date already on your calendar.</span></span>
+        </label>
+      </div>
+    </article>
+
+    <article class="week" data-week="8" id="week-8">
+      <div class="week-head">
+        <span class="week-num">WEEK 08</span>
+        <h3>Running Multiple Ops</h3>
+        <span class="chip" data-chip="8">Not started</span>
+      </div>
+      <p class="body-text">You're already running several builds at once —
+      Azimuth, Operation: Laughing GAs, Hero Mode, Ethan Mode, DFS-550, the
+      backyard. The risk isn't any one of them; it's losing the thread across
+      all of them.</p>
+      <div class="apps">
+        <div class="app-block">
+          <div class="app-label">At Work</div>
+          <p>A periodic status muster across every active work project, so
+          nothing stalls silently.</p>
+        </div>
+        <div class="app-block">
+          <div class="app-label">At Home</div>
+          <p>The same muster covers the household projects — no separate
+          system needed, just the same habit applied twice.</p>
+        </div>
+      </div>
+      <div class="exercise">
+        <label>
+          <input type="checkbox" data-week-check="8">
+          <span><span class="ex-label">Exercise</span><span class="ex-text">Run a full status muster this week across everything currently open, and close out or park anything that's actually done.</span></span>
+        </label>
+      </div>
+    </article>
+  </section>
+
+  <section class="tier" data-tier="4">
+    <div class="tier-head">
+      <span class="roman">IV.</span>
+      <h2>Command</h2>
+      <span class="tier-sub">Orchestrator — Weeks 9–10</span>
+    </div>
+    <p class="tier-desc">Turn personal fluency into scaled advantage — this
+    tier leans work, because teaching is where it compounds fastest for a
+    trainer.</p>
+
+    <article class="week" data-week="9" id="week-9">
+      <div class="week-head">
+        <span class="week-num">WEEK 09</span>
+        <h3>Train the Trainer</h3>
+        <span class="chip" data-chip="9">Not started</span>
+      </div>
+      <p class="body-text">You already teach forensics for a living, and
+      Azimuth's whole premise is a mastery-based curriculum with AI literacy
+      built in. Everything in Tiers I–III is raw material for that — the
+      fastest way to lock in a skill is to turn it into something you'd hand
+      to a student.</p>
+      <div class="apps">
+        <div class="app-block">
+          <div class="app-label">At Work</div>
+          <p>Draft one real Azimuth module, or build out the next Operation:
+          Laughing GAs device legend, using the build loop and standing
+          orders already running.</p>
+        </div>
+        <div class="app-block na">
+          <div class="app-label">At Home</div>
+          <p>No forced pairing this week — this one's a work waypoint, and
+          that's fine.</p>
+        </div>
+      </div>
+      <div class="exercise">
+        <label>
+          <input type="checkbox" data-week-check="9">
+          <span><span class="ex-label">Exercise</span><span class="ex-text">Produce one piece of real training content, start to finish, using everything from Tiers I–III.</span></span>
+        </label>
+      </div>
+    </article>
+
+    <article class="week" data-week="10" id="week-10">
+      <div class="week-head">
+        <span class="week-num">WEEK 10</span>
+        <h3>Direct the Fleet</h3>
+        <span class="chip" data-chip="10">Not started</span>
+      </div>
+      <p class="body-text">Some jobs are too big for one thread — a full
+      literature review, a comprehensive audit, a build with many independent
+      parts. That's when you stop asking one question at a time and start
+      directing several efforts in parallel toward one result.</p>
+      <div class="apps">
+        <div class="app-block">
+          <div class="app-label">At Work</div>
+          <p>A full comparative review across multiple forensic tools, or a
+          complete multi-device Operation: Laughing GAs scenario.</p>
+        </div>
+        <div class="app-block">
+          <div class="app-label">At Home</div>
+          <p>A full-scale push on the backyard build, from concept through
+          contractor-ready plans.</p>
+        </div>
+      </div>
+      <div class="exercise">
+        <label>
+          <input type="checkbox" data-week-check="10">
+          <span><span class="ex-label">Exercise</span><span class="ex-text">Pick one large piece of work already on your plate and run it as a single orchestrated effort instead of a dozen small asks.</span></span>
+        </label>
+      </div>
+    </article>
+  </section>
+
+  <section class="longgame">
+    <div class="tier-head">
+      <span class="roman">—</span>
+      <h2>The Long Game</h2>
+      <span class="tier-sub">What sustains the edge after Week 10</span>
+    </div>
+    <p class="tier-desc">Ten weeks builds the capability. These are the
+    habits that keep it compounding for the next decade instead of decaying
+    back to where you started.</p>
+
+    <div class="longgame-grid">
+      <div class="habit">
+        <div class="habit-label">Keep the Case File Current</div>
+        <p>Periodically review what Claude remembers about your projects.
+        Prune what's stale, correct what's wrong. A file you never audit
+        slowly stops being trustworthy.</p>
+      </div>
+      <div class="habit">
+        <div class="habit-label">Verify Before You Trust</div>
+        <p>Especially anything evidentiary, legal, or financial. Treat AI
+        output as a lead, not a conclusion — the same way you'd treat an
+        unconfirmed forensic artifact.</p>
+      </div>
+      <div class="habit">
+        <div class="habit-label">Never Solve It Twice</div>
+        <p>The moment you notice yourself doing something a second time,
+        that's the signal to turn it into a skill or a scheduled task.</p>
+      </div>
+      <div class="habit">
+        <div class="habit-label">Teach What You Learn</div>
+        <p>Every capability built here gets stronger the moment it becomes
+        training material for someone else — that's the actual compounding
+        part.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>This file isn't a certificate — it's a living dossier. Once Tier IV is
+    behind you, come back and ask Claude to draft a Tier V. Progress is
+    stored locally in this browser only.</p>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  var STORAGE_KEY = 'tradecraft-progress-v1';
+  var TOTAL_WEEKS = 10;
+  var TIER_RANGES = { 1: [1, 2], 2: [3, 5], 3: [6, 8], 4: [9, 10] };
+  var WEEK_TITLES = {
+    1: 'Week 1 — Build Your Case File',
+    2: 'Week 2 — Ask Like an Analyst',
+    3: 'Week 3 — The Rapid Build Loop',
+    4: 'Week 4 — The Paper Trail',
+    5: 'Week 5 — Code in the Loop',
+    6: 'Week 6 — Build a Standing Order',
+    7: 'Week 7 — Set It and Forget It',
+    8: 'Week 8 — Running Multiple Ops',
+    9: 'Week 9 — Train the Trainer',
+    10: 'Week 10 — Direct the Fleet'
+  };
+
+  function loadCompleted() {
+    try {
+      var raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return {};
+      var parsed = JSON.parse(raw);
+      return (parsed && typeof parsed === 'object') ? parsed : {};
+    } catch (e) {
+      return {};
+    }
+  }
+
+  function saveCompleted(state) {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    } catch (e) {
+      /* storage unavailable — state just won't persist across visits */
+    }
+  }
+
+  var completed = loadCompleted();
+
+  function render() {
+    var doneCount = 0;
+    for (var w = 1; w <= TOTAL_WEEKS; w++) {
+      var isDone = !!completed[w];
+      if (isDone) doneCount++;
+
+      var checkbox = document.querySelector('[data-week-check="' + w + '"]');
+      if (checkbox) checkbox.checked = isDone;
+
+      var chip = document.querySelector('[data-chip="' + w + '"]');
+      if (chip) {
+        chip.textContent = isDone ? 'Complete' : 'Not started';
+        chip.classList.toggle('done', isDone);
+      }
+
+      var card = document.querySelector('.week[data-week="' + w + '"]');
+      if (card) card.classList.toggle('is-done', isDone);
+    }
+
+    var overallPct = Math.round((doneCount / TOTAL_WEEKS) * 100);
+    var pctEl = document.getElementById('overall-pct');
+    var countEl = document.getElementById('overall-count');
+    var barEl = document.getElementById('overall-bar');
+    if (pctEl) pctEl.textContent = overallPct;
+    if (countEl) countEl.textContent = doneCount;
+    if (barEl) barEl.style.width = overallPct + '%';
+
+    Object.keys(TIER_RANGES).forEach(function (tier) {
+      var range = TIER_RANGES[tier];
+      var tierDone = true;
+      for (var i = range[0]; i <= range[1]; i++) {
+        if (!completed[i]) { tierDone = false; break; }
+      }
+      var dot = document.querySelector('[data-tier-dot="' + tier + '"]');
+      if (dot) dot.classList.toggle('done', tierDone);
+    });
+
+    var nextWeek = null;
+    for (var n = 1; n <= TOTAL_WEEKS; n++) {
+      if (!completed[n]) { nextWeek = n; break; }
+    }
+
+    document.querySelectorAll('.week').forEach(function (el) {
+      el.classList.remove('is-next');
+    });
+
+    var panel = document.getElementById('next-up-panel');
+    var label = document.getElementById('next-up-label');
+    var title = document.getElementById('next-up-title');
+    var link = document.getElementById('next-up-link');
+
+    if (nextWeek === null) {
+      panel.classList.add('all-done');
+      label.textContent = 'All Ten Complete';
+      title.textContent = 'Ready for Tier V — ask Claude to draft the next one.';
+      link.style.display = 'none';
+    } else {
+      panel.classList.remove('all-done');
+      label.textContent = 'Next Waypoint';
+      title.textContent = WEEK_TITLES[nextWeek];
+      link.href = '#week-' + nextWeek;
+      link.style.display = '';
+      var nextCard = document.querySelector('.week[data-week="' + nextWeek + '"]');
+      if (nextCard) nextCard.classList.add('is-next');
+    }
+  }
+
+  document.addEventListener('change', function (e) {
+    var t = e.target;
+    if (t && t.matches('[data-week-check]')) {
+      var wk = t.getAttribute('data-week-check');
+      if (t.checked) {
+        completed[wk] = true;
+      } else {
+        delete completed[wk];
+      }
+      saveCompleted(completed);
+      render();
+    }
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>
